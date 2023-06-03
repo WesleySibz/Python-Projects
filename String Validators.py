@@ -1,8 +1,16 @@
 if __name__ == '__main__':
-	s = input()
+        s = input()
+        alphanum = [i.isalnum() for i in s]
+        print(any(alphanum))
 
-	print(any(i.isalnum for i in s))
-	print(any(i.isalpha for i in s))
-	print(any(i.isdigit for i in s))
-	print(any(i.islower for i in s))
-	print(any(i.isupper for i in s))
+        alpha = [i.isalpha() for i in s]
+        print(any(alpha))
+
+        digit = [i.isdigit() for i in s]
+        print(any(digit))
+
+        lower = [i.islower() for i in s]
+        print(any(lower))
+
+        upper = [i.isupper() for i in s]
+        print(any(upper))
