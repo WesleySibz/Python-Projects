@@ -1,16 +1,15 @@
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-n = int(input())
-s = set(map(int, input().split()))
-N=int(input())
-for i in range(N):
-    p=input().split()
-    if p[0]=="pop": 
+input()
+s= set(map(int, input().split()))
+n= int(input())
+for i in range(n):
+    commands = input().split()
+    if len(commands)> 1:
+        e = int(commands[1])
+    if commands[0] == "pop":
         s.pop()
-    elif p[0]=="discard":
-        s.discard(int(p[1]))
-
-        
-    else:
-        s.remove(int(p[1]))
-        
+    if commands[0] == "remove":
+        s.remove(e)
+    if commands[0] == "discard":
+        s.discard(e)
 print(sum(s))
