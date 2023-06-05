@@ -1,3 +1,5 @@
+#!/bin/python3
+
 import math
 import os
 import random
@@ -6,8 +8,8 @@ import sys
 
 # Complete the solve function below.
 def solve(s):
-   s = s.split(" ")
-   return(" ".join(i.capitalize() for i in s))
+    s = s.split(" ")
+    return(" ".join(i.capitalize() for i in s))
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
