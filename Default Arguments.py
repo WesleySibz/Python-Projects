@@ -15,11 +15,10 @@ class OddStream(object):
         to_return = self.current
         self.current += 2
         return to_return
-
-    def print_from_stream(n, stream=EvenStream()):
-        stream.__init__()
-        for _ in range(n):
-            print(stream.get_next())
+def print_from_stream(n, stream=EvenStream()):
+    stream.__init__()
+    for _ in range(n):
+        print(stream.get_next())
 
 
 queries = int(input())
