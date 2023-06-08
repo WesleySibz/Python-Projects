@@ -1,22 +1,7 @@
-import itertools
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from itertools import product
 
-(K, N) = map(int, raw_input().split())
-
-L = list()
-for i in range(K):
-    l = map(int, raw_input().split())
-    n = l[0]
-    L.append(l[1:])
-    assert len(L[i]) == n
-
-S_max = 0
-L_max = None
-
-for l in itertools.product(*L):
-    s = sum([x**2 for x in l]) % N
-
-    if s > S_max:
-        S_max = s
-        L_max = l
-
-print S_max
+k, m = map(int, input().split())
+n = (list(map(int, input().split()))[1:] for _ in range(k))
+results = (sum(i**2 for i in x) % m for x in product(*n))
+print(max(results))
