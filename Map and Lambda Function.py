@@ -1,7 +1,6 @@
-cube = lambda x: # complete the lambda function 
+cube = lambda x: x ** 3
 
 def fibonacci(n):
-    # return a list of fibonacci numbers
     a, b = 0, 1
     for i in range(n):
         yield a
