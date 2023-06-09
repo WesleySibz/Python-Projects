@@ -1,14 +1,10 @@
-from collections import Counter
-
-n = int(raw_input())
-words = [raw_input().strip() for _ in range(n)]
-counts = Counter(words)
-
-print len(counts)
-
-for word in words:
-    derp = counts.pop(word, None)
-    if derp == None:
-        continue
+from collections import*
+d={}
+for i in range(int(input())):
+    word=input()
+    if word in d:
+        d[word]+=1
     else:
-        print derp, # comma stops print from ending with newline
+        d[word]=1
+print(len(d))
+print(*d.values())  
